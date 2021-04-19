@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="addBookCol">
+
+    {% if message %}
+    <h2>{{message}}</h2>
+    <br><br>
+    {% endif %}
+
+    <h1>Добавить новую книгу</h1> <p></p>
+    <form method="post">
+        <h2>Книги</h2><br>
+        <input type="text" id="title" name="title" placeholder="Title" required>
+        <input type="text" id="author" name="author" placeholder="Author" required>
+        <input type="text" id="year" name="year" placeholder="Years" required>
+
+        <br><br>
+
+        <center>
+            <button type="submit" class="minWidth">Все книги</button>
+            <button type="reset" class="minWidth">Сброс</button>
+        </center>
+    </form>
+</div>
+{% endblock %}
